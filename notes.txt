@@ -1,0 +1,38 @@
+HR 
+--
+	Policies & Documents
+		Employee Handbook
+
+	FAQ / How To
+		How can I check my Pay Stubb online?
+		How can I see how much vacation I have?
+		How can I find more information about our Medical coverage?
+		How do I file an expense report?
+
+
+
+IT
+--
+
+Policies
+	SOP
+	Aceptable Use
+
+FAQ/How To
+	How to connect to the VPN
+	How to Connect to a Virtual Machine
+
+Documents
+	Instruction docs on box
+	New Employee Form
+	?
+	?
+
+What version of <Some Software> should I be using?
+
+
+Company Events
+--------------
+
+	Connect to company calendar in Office 365?????
+	List Company Holidays - Office Closed
