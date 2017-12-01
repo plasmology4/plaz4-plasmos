@@ -18,7 +18,6 @@ export function loginIsPending(state = false, action) {
 }
 
 export function userInfo(state = null, action) {
-  console.log("userInfo: "+JSON.stringify(action))
   switch (action.type) {
     case 'USER_INFO':
       return action.userInfo
@@ -28,7 +27,6 @@ export function userInfo(state = null, action) {
 }
 
 export function userIsAdmin(state = false, action) {
-  console.log("userIsAdmin: "+JSON.stringify(action))
   switch (action.type) {
     case 'USER_IS_ADMIN':
       return action.userIsAdmin
@@ -38,7 +36,6 @@ export function userIsAdmin(state = false, action) {
 }
 
 export function sessionChange(state = null, action) {
-  console.log("sessionChange>> action.type: " + action.type + " action.session: " + JSON.stringify(action.session))
   switch (action.type) {
     case 'SESSION_CHANGE':
       return action.session

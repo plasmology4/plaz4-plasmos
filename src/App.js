@@ -22,6 +22,10 @@ import Loader from './components/util/Loader'
 
 import './assets/css/plaz4-style.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
+
 
 const store = configureStore(); // You can also pass in an initialState here
 
@@ -39,7 +43,15 @@ class App extends Component {
 
               <Nav />
               <Loader />
-
+              <ToastContainer 
+                position="top-right"
+                type="success"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                pauseOnHover
+              />
 
               <Switch>
               

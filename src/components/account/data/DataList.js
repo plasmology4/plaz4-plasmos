@@ -12,6 +12,10 @@ const accountHeaders = (props) => [
           accessor: "acct"
         },
         {
+          Header: "Orig Account",
+          accessor: "fullAcct"
+        },
+        {
           Header: "Account Name",
           accessor: "acctDesc"
         },
@@ -84,6 +88,18 @@ const journalEntryHeaders = (props) => [
       Header: "Journal Entry Data",
       columns: [
         {
+          Header: "Account",
+          accessor: "acct"
+        },
+        {
+          Header: "Orig Account",
+          accessor: "fullAcct"
+        },
+        {
+          Header: "Type",
+          accessor: "majorType"
+        },
+        {
           Header: "Fiscal Yr",
           accessor: "fiscalYr"
         },
@@ -92,12 +108,16 @@ const journalEntryHeaders = (props) => [
           accessor: "period"
         },
         {
-          Header: "Account",
-          accessor: "acct"
-        },
-        {
           Header: "Description",
           accessor: "descrip"
+        },
+        {
+          Header: "Period Debit",
+          accessor: "periodDebit"
+        },
+        {
+          Header: "Period Credit",
+          accessor: "periodCredit"
         },
         {
           Header: "Period Balance",
@@ -117,6 +137,79 @@ const journalEntryHeaders = (props) => [
     }
   ];
 
+const apInvoiceHeaders = (props) => [
+    {
+      Header: "AP Invoice Data",
+      columns: [
+        {
+          Header: "Vendor Name",
+          accessor: "vendor"
+        },
+        {
+          Header: "Vendor Nbr",
+          accessor: "vendorNbr"
+        },
+        {
+          Header: "Invoice Nbr",
+          accessor: "invoiceNbr"
+        },
+        {
+          Header: "Invoice Record ID",
+          accessor: "invoiceId"
+        },
+        {
+          Header: "Invoice Date",
+          accessor: "invoiceDate"
+        },
+        {
+          Header: "Due Date",
+          accessor: "dueDate"
+        },
+        {
+          Header: "Quantity",
+          accessor: "quantity"
+        },
+        {
+          Header: "Unit Cost",
+          accessor: "unitCost"
+        },
+        {
+          Header: "Invoice Amount",
+          accessor: "amount"
+        },
+        {
+          Header: "Balance Due",
+          accessor: "balanceDue"
+        },
+        {
+          Header: "Account",
+          accessor: "acct"
+        },
+        {
+          Header: "Orig Account",
+          accessor: "fullAcct"
+        },
+        {
+          Header: "Account Name",
+          accessor: "acctName"
+        },
+        {
+          Header: "Line Amount",
+          accessor: "lineAmount"
+        },
+        {
+          Header: "",
+          accessor: "_id",  
+          Cell: row => (
+            <div style={{ width: '100%', height: '100%', }}>
+              <a className="button tiny p4-grid-button right" onClick={() => props.syncData(row.original)}><i className="material-icons p4-grid-button-icon">cloud_upload</i></a>
+              <a className="button tiny p4-grid-button right" onClick={() => props.showSyncStatus(row.original)}><i className="material-icons p4-grid-button-icon">info</i></a>
+            </div>
+          )
+        }
+      ]
+    }
+  ];
 
 const DataList = (props) => {
 
@@ -127,6 +220,8 @@ const DataList = (props) => {
     headers = accountTypeHeaders(props);
   } else if (props.dataType === 'journal-entries') {
     headers = journalEntryHeaders(props);
+  } else if (props.dataType === 'ap-invoices') {
+    headers = apInvoiceHeaders(props);
   } else {
     headers = accountHeaders(props);
   }
@@ -138,7 +233,7 @@ const DataList = (props) => {
           <ReactTable
             data={props.items}
             columns={headers}
-            defaultPageSize={10}
+            defaultPageSize={100}
             className="-striped -highlight"
           />
         </div>

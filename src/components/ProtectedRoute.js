@@ -15,8 +15,8 @@ class ProtectedRoute extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("ProtectedRoute.mapStateToProps: "+JSON.stringify(state)); // state
-  console.log("ownProps: "+JSON.stringify(ownProps)); // ownProps
+  console.debug("ProtectedRoute.mapStateToProps: "+JSON.stringify(state)); // state
+  console.debug("ownProps: "+JSON.stringify(ownProps)); // ownProps
   return {
       session: state.session,
       path: ownProps.path

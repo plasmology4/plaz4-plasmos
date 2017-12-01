@@ -75,7 +75,7 @@ export function executeLoginRequest(username, password) {
       })
       //.then((response) => response.json())
       .then((session) => {
-        console.log("session: "+JSON.stringify(session));
+        console.debug("session: "+JSON.stringify(session));
         dispatch(sessionChange(session));
       })
       .catch(() => dispatch(loginHasErrored(true)));

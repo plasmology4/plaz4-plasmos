@@ -1,5 +1,4 @@
 export function isBusy(state = false, action) {
-  console.log("isBusy>> action.type: " + action.type + " action.status: " + JSON.stringify(action.isBusy))
   switch (action.type) {
     case 'API_CALL_BUSY':
       return action.isBusy

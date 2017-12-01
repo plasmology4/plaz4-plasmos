@@ -35,7 +35,7 @@ class Auth extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("Info.mapStateToProps: "+JSON.stringify(state)); // state
+  console.debug("Info.mapStateToProps: "+JSON.stringify(state)); // state
   //console.log("ownProps: "+JSON.stringify(ownProps)); // ownProps
   return {
       user: state.session.user

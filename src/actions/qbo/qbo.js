@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { errorCallingApi, createWindow, notify } from './utils'
+import { errorCallingApi, createWindow, notify } from '../utils'
 import base64 from 'base-64'
 
 /*
@@ -16,7 +16,7 @@ import base64 from 'base-64'
 export const baseUrl = 'https://sandbox-quickbooks.api.intuit.com/';
 // export const baseUrl = 'https://quickbooks.api.intuit.com/';
 
-const callbackURL = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl';
+//const callbackURL = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl';
 const authURL = 'https://appcenter.intuit.com/connect/oauth2';
 const accessTokenURL = 'https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer';
 const revokeTokenURL = 'https://oauth.platform.intuit.com/oauth2/v1/tokens/revoke';

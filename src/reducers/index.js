@@ -12,25 +12,25 @@ import { accountsData } from './acct';
 // This is what controls the state object shape - no duplicate keys allowed
 export default combineReducers({
     // General 
-    isBusy: isBusy,
-    hasErrored: hasErrored,
+    isBusy: isBusy
+    , hasErrored: hasErrored
     // Session
-    session: sessionChange, 
-    loginHasErrored: loginHasErrored, 
-    loginIsPending: loginIsPending,
-    userIsAdmin: userIsAdmin,
+    , session: sessionChange 
+    , loginHasErrored: loginHasErrored
+    , loginIsPending: loginIsPending
+    , userIsAdmin: userIsAdmin
     // User
-    users: usersData,
-    //user: [setUser,editUser],
-    user: setUser,
-    editUser: editUser,
+    , users: usersData
+    //user: [setUser,editUser]
+    , user: setUser
+    , editUser: editUser
     // Orgs
-    orgs: orgData,
-    orgStatus: orgStatus,
+    , orgs: orgData
+    , orgStatus: orgStatus
     // Other
-    news: listNews,
-    docs: listDocs,
+    , news: listNews
+    , docs: listDocs
     // QuickBooksOnline
-    qboAuth: qboAuth,
-    accounts: accountsData,   
+    , qboAuth: qboAuth
+    , accounts: accountsData
 });

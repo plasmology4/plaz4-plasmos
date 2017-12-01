@@ -77,7 +77,7 @@ class Nav extends Component {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("Nav.mapStateToProps: "+JSON.stringify(state)); // state
+  console.debug("Nav.mapStateToProps: "+JSON.stringify(state)); // state
   //console.log("ownProps: "+JSON.stringify(ownProps)); // ownProps
   var superAdmin = false;
   var isAdmin = false;

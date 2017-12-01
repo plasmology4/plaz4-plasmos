@@ -168,6 +168,23 @@ $main-font-family: "Roboto Condensed",sans-serif;
   padding: 8px !important;
 }
 
+.plaz4-period-select  {
+  width: 160px;
+  max-width: 160px;
+  height: 34px;
+  margin: 4px;
+}
+
+.plaz4-period-comp  {
+  @extend .data-table;
+  display: inline-block;
+  float: right;
+  width: 80px;
+  max-width: 80px;
+  height: 34px;
+  margin: 4px;
+}
+
 .c2-button  {
   @extend .button;
   width: 230px;
@@ -175,6 +192,22 @@ $main-font-family: "Roboto Condensed",sans-serif;
   //padding: 8px !important;
   cursor:pointer;
   margin: 10px 0px 10px 0px !important;
+}
+
+.auth-button  {
+  @extend .button;
+  width: 40px;
+  height: 40px;
+  cursor:pointer;
+  margin: 10px 0px 10px 10px !important;
+  text-align: center;
+}
+
+.auth-icon {
+  padding: 5px !important;
+  position: relative;
+  top: -8px;
+  right: 9px;
 }
 
 .c2qb-button  {

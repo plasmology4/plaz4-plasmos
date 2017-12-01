@@ -11,7 +11,7 @@ const Loader = props => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("Loader.mapStateToProps: "+JSON.stringify(state)); // state
+  console.debug("Loader.mapStateToProps: "+JSON.stringify(state)); // state
   var style = (state.isBusy)? {} : {display:'none'} ;
   return {
     style: style
