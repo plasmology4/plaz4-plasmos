@@ -36,3 +36,10 @@ Company Events
 
 	Connect to company calendar in Office 365?????
 	List Company Holidays - Office Closed
+
+
+QuickBooks Migration Tools Enhancements
+---------------------------------------
+1. When uploading AP, capability to set custom date override
+2. Uploading Initial Account Types is clunky
+3. 

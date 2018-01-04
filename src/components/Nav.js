@@ -50,12 +50,12 @@ class Nav extends Component {
               <ul className="menu">
                 <li><NavLink to="/" activeClassName="active-link"><i className="material-icons">home</i></NavLink></li>
                 
-                <li><NavLink to="/news" className="fix-lower" activeClassName="active-link">News</NavLink></li>
+                <li><NavLink to="/company/news" className="fix-lower" activeClassName="active-link">Company</NavLink></li>
                 <li><NavLink to="/resources" className="fix-lower" activeClassName="active-link">Departments</NavLink></li>
-                <li><NavLink to="/events" className="fix-lower" activeClassName="active-link">Events</NavLink></li>
                 {( (session) => { if (session) return ( <li><NavLink to="/inventory" className="fix-lower" activeClassName="active-link">Inventory</NavLink></li> ) })(this.props.session) }
+                {( (session) => { if (session) return ( <li><NavLink to="/finance" className="fix-lower" activeClassName="active-link">Finance</NavLink></li> ) })(this.props.session) }
                 {( (session) => { if (session) return ( <li><NavLink to="/account" className="fix-lower" activeClassName="active-link">Account</NavLink></li> ) })(this.props.session) }
-
+                
                 {( (isAdmin) => { if (isAdmin) return ( <li><NavLink to="/admin" className="fix-lower" activeClassName="active-link">Admin</NavLink></li> ) })(this.props.isAdmin) }
                 {( (superAdmin) => { if (superAdmin) return ( <li><NavLink to="/control" className="fix-lower" activeClassName="active-link">Control</NavLink></li> ) })(this.props.superAdmin) }
 

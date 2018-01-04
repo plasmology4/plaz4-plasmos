@@ -2,7 +2,7 @@ import axios from 'axios'
 import { BASE_URL } from './config'
 import { contentHeaders } from './config'
 import { errorCallingApi, showBusy, notify } from './utils'
-import { baseUrl } from './qbo'
+import { baseUrl } from './qbo/qbo'
 
 const throttleTimeout = 60*1000 / 60;  
 

@@ -12,19 +12,20 @@ import base64 from 'base-64'
  *  https://sandbox-quickbooks.api.intuit.com/* 
  * 
  */
+const prod = true;
 
-export const baseUrl = 'https://sandbox-quickbooks.api.intuit.com/';
-// export const baseUrl = 'https://quickbooks.api.intuit.com/';
 
-//const callbackURL = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl';
+export const baseUrl = (prod)?'https://quickbooks.api.intuit.com/':'https://sandbox-quickbooks.api.intuit.com/';
+
+const callbackURL = 'https://developer.intuit.com/v2/OAuth2Playground/RedirectUrl';
 const authURL = 'https://appcenter.intuit.com/connect/oauth2';
 const accessTokenURL = 'https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer';
 const revokeTokenURL = 'https://oauth.platform.intuit.com/oauth2/v1/tokens/revoke';
-const clientId = 'Q0GDRSsbMBTOroGth4Rwiwbr4I4a74GeE4p1BpLleq0opkDR8h';
-const clientSecret = 'CeHEA8l3L6FPRw4FcRjohoFFpSWGUZ2zmvPHy6Po';
+const clientId = (prod)?'Q0YHtHYLcZ8senl7a7NBStO6CuKbjsornChp5eeBG2ygw6E5K4':'Q0GDRSsbMBTOroGth4Rwiwbr4I4a74GeE4p1BpLleq0opkDR8h';
+const clientSecret = (prod)?'cANqdJqcdVTiRAugPCd7KYZEnAbDuK70MXK0RrWf':'CeHEA8l3L6FPRw4FcRjohoFFpSWGUZ2zmvPHy6Po';
 const scope = 'com.intuit.quickbooks.accounting';
 const state = 'security_token';
-const redirectUrl = 'http://localhost:3000/oauth2/redirectUrl';
+const redirectUrl = (prod)?'https://rjohn-macbook.local:3000/oauth2/redirectUrl':'http://localhost:3000/oauth2/redirectUrl';
 
 export function qboAuthStatus(qboAuth) {
   return {

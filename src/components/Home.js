@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import FullSystemImg from '../assets/img/p4-full-system.jpg'
-import NewsList from './news/NewsList'
+import NewsList from './company/news/NewsList'
 // import SystemImg from '../assets/img/p4-system-closeup.jpg'
 // import CannisterImg from '../assets/img/cannisters-1.png'
 // import HospitalImg from '../assets/img/hi-tech-hospital.jpg'

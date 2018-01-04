@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { executeQboAuthRequest, revokeAccessToken, getCompanyInfo, checkAccessToken } from '../../../actions/qbo';
+import { executeQboAuthRequest, revokeAccessToken, getCompanyInfo, checkAccessToken } from '../../../actions/qbo/qbo';
 import { moment } from 'moment'
 
 class QboConfig extends Component {

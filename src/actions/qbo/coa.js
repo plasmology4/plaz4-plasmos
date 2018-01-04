@@ -253,6 +253,32 @@ function extractErrorMsg(err) {
   return errMsg;
 }
 
+export function deleteAllAccounts(qboAuth) {
+  console.log('deleteAllAccounts:');
+  loadParentCache(qboAuth, null)
+      .then(async (parentCache) => {
+        var keys = parentCache.keys();
+
+        for (let key of keys) {
+
+          var account = parentCache.get(key);
+          account.Active = false;
+
+          await createQboAccount(account, qboAuth)
+            .then(qboAccount => {
+              notify('success', 'Set active to false: '+qboAccount.Name)
+            })
+            .catch(async err => {
+              console.error('Error in setting active to false: '+JSON.stringify(err));
+            });  
+        }
+      })
+      .catch((err) => {
+        var msg = "Error Deleting Accounts: " + JSON.stringify(err);
+        console.error(msg);
+      });
+}
+
 export function loadParentCache(qboAuth, parentCache) {
   console.log('loadParentCache:');
 

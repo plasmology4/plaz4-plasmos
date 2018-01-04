@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { executeQboAuthRequest } from '../../../actions/qbo';
+import { executeQboAuthRequest } from '../../../actions/qbo/qbo';
 
 class NetSuiteConfig extends Component {
   
